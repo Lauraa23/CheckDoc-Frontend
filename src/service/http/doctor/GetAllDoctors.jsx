@@ -1,12 +1,13 @@
 import axios from "axios";
 
-const callApi = async (url) => {
+const GetAllDoctors = async () => {
   try {
-    const response = await axios.get(url);
-    console.log(response.data);
+    const response = await axios.get("http://localhost:3001/doctor/getAll");
+    return response.data; 
   } catch (error) {
-    console.error("Error fetching data: ", error);
+    console.error("Error fetching doctors: ", error);
+    throw error;
   }
 };
 
-export default callApi;
+export default GetAllDoctors;
