@@ -49,6 +49,7 @@ const SignUp = () => {
       } else {
         await createUser(data);
         alert("Usuario registrado exitosamente!");
+        window.location.href = "/";
       }
     } catch (error) {
       alert("El registro falló.");

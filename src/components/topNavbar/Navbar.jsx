@@ -37,8 +37,12 @@ const Navbar = ({ transparent }) => {
       </div>
       <div className="navLinks">
         <ul className="navbarItems list-none flex gap-5 items-center text-[1rem]">
-          <li className="cursor-pointer text-white">Home</li>
-          <li className="cursor-pointer text-white">Services</li>
+          <NavLink to="/" className="cursor-pointer text-white">
+            Home
+          </NavLink>
+          <NavLink to="/doctorsList" className="cursor-pointer text-white">
+            Services
+          </NavLink>
           <li className="cursor-pointer text-white">About</li>
           <li className="cursor-pointer text-white">Help</li>
         </ul>
