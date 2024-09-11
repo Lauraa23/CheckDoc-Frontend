@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 const ListConsultationLink = () => {
   const callApi = async () => {
@@ -30,12 +31,14 @@ const ListConsultationLink = () => {
             comprehensive Online consultation app available both in Android and
             iOS
           </p>
-          <button
-            onClick={callApi}
-            className="checckDoctorList bg-blue-700 text-white font-semibold py-4 px-7 rounded-full"
-          >
-            Check our List
-          </button>
+          <NavLink to="/doctorsList">
+            <button
+              onClick={callApi}
+              className="checckDoctorList bg-blue-700 text-white font-semibold py-4 px-7 rounded-full"
+            >
+              Check our List
+            </button>
+          </NavLink>
         </div>
       </div>
     </>
